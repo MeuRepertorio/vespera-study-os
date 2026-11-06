@@ -5,7 +5,8 @@ Site de revisão intensiva para prova, focado em **formação de preços por ROI
 ## O que tem no site
 - **Ética**: 8 aulas (6 recuperadas do FRENTE 12 + cidadania e nacionalidade), 14 perguntas discursivas e 10 testes de múltipla escolha
 - **DMN**: 7 aulas (6 do FRENTE 12 + Canvas e validação), 14 perguntas discursivas e 10 testes de múltipla escolha
-- **Rescisão no papel**: três modalidades com números editáveis, resolução de 10 etapas e separação entre verbas do acerto e multa do FGTS; estudo ilustrativo, não substitui cálculo trabalhista completo
+- **Rescisão no papel (A–E)**: 12 exercícios com os mesmos ramos de atividade dos 12 casos de ROI, entradas para responder, correção automática, dicas e resolução por etapa; a conferência separa total bruto e multa do FGTS
+- **Laboratório de rescisão**: três modalidades com números editáveis e resolução de 10 etapas; estudo ilustrativo, não substitui cálculo trabalhista completo
 - ROI foi mantido sem alterações na aula de cálculos
 - Nova **Aula: cálculo no papel**, com todas as etapas escritas na ordem da prova, para os 12 exercícios originais (11 linhas guiadas por caso)
 - Aula especial de despesa de 15% sobre o preço, com 12 linhas, isolamento da incógnita e divisão manual
