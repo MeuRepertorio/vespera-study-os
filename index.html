@@ -84,6 +84,53 @@ html{scroll-padding-top:32px}body{min-width:320px}
 @media(max-width:950px){.study-subject-layout{grid-template-columns:1fr}.study-sidebar{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.study-sidebar{grid-template-columns:1fr}.resci-fields{grid-template-columns:1fr 1fr;gap:9px}.study-chapter>summary,.study-open-question>summary{padding:12px}.study-chapter-body,.study-question-answer{padding:10px 13px 15px}.study-matter-tabs .btn{flex:1;font-size:12px}.resci-fields label{font-size:11px}.study-option{padding:11px}}
 
+
+
+/* Curso de rescisão A-E: 12 exercícios escritos como as 12 contas de ROI. */
+.resci-course{border:1px solid #416c61;border-radius:20px;background:linear-gradient(155deg,#103028 0%,#0b232b 32%,#0b1d24 100%);padding:clamp(15px,2.5vw,25px);margin:24px 0 38px;min-width:0}
+.resci-course-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap}
+.resci-course-head h2{font-size:clamp(23px,2.5vw,32px);line-height:1.14;margin:7px 0 12px}
+.resci-course-head .lead{font-size:14px;max-width:740px;margin:0 0 20px;color:#c0ded0}
+.resci-ae-map{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-bottom:18px}
+.resci-ae-map>div{min-width:0;background:#122e2e;border:1px solid #356358;border-radius:12px;padding:13px 11px;display:grid;gap:4px}
+.resci-ae-map strong{background:#a3e8bc;color:#0a2721;border-radius:8px;width:29px;height:29px;display:grid;place-items:center;font-size:14px}
+.resci-ae-map span{color:#e3fff0;font-weight:800;font-size:12px;line-height:1.4}
+.resci-ae-map small{color:#a3bdb9;font-size:11px;line-height:1.4}
+.resci-course-controls{display:flex;flex-wrap:wrap;align-items:center;gap:9px;padding:12px 0 20px}
+.resci-course-controls label{font-weight:800;font-size:12px;color:#b6e8cc}
+.resci-course-controls select{flex:1;min-width:195px}
+.resci-exercise-intro{border:1px solid #385b58;background:#10272e;padding:18px;border-radius:13px;margin:0 0 19px}
+.resci-exercise-intro h3{font-size:21px;margin:4px 0 8px}.resci-exercise-intro p:not(.eyebrow){font-size:13px;line-height:1.75;color:#cbded8}
+.resci-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:15px 0}
+.resci-fact{min-width:0;border:1px solid #2f5353;border-radius:10px;background:#0b2027;padding:10px}
+.resci-fact span{display:block;color:#a6c5bd;font-size:11px;line-height:1.4}.resci-fact b{display:block;color:#f1fff6;font-size:15px;margin-top:5px;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.resci-exercise-note{font-size:12px;color:#e0dbc0;background:#2a2b23;border:1px solid #5a5840;border-radius:10px;padding:10px 12px;line-height:1.6}
+.resci-ae-progress{margin:4px 0 14px}.resci-ae-progress strong{display:block;font-size:12px;color:#bbdfca}
+.resci-ae-questions{display:grid;gap:12px}
+.resci-ae-q{background:#0d222a;border:1px solid #365954;border-radius:15px;padding:16px;min-width:0}
+.resci-ae-q.complete{border-color:#6eaa83;background:#12332a}
+.resci-ae-head{display:flex;align-items:flex-start;gap:12px}
+.resci-ae-letter{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border-radius:11px;background:#22473a;color:#c6f3d6;font-weight:900;font-size:18px}
+.resci-ae-q h4{margin:0 0 5px;font-size:17px}.resci-ae-q .resci-ae-prompt{font-size:13px;line-height:1.7;color:#bfd9d0;margin:10px 0}
+.resci-ae-answer{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:12px 0}
+.resci-ae-answer label{font-size:12px;font-weight:800;color:#c6e4d2}
+.resci-ae-answer input{min-width:100px;flex:1;max-width:220px;min-height:42px;background:#061a20;color:#f8fff9;border:1px solid #52736f;border-radius:9px;padding:9px 12px;font-size:16px;font-variant-numeric:tabular-nums}
+.resci-ae-actions{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.resci-ae-actions .btn{white-space:normal}
+.resci-ae-feedback{padding:11px 13px;border-radius:9px;font-size:13px;line-height:1.6;margin:11px 0}
+.resci-ae-feedback.correct{background:#183e30;border:1px solid #6ca47f;color:#d4f8df}
+.resci-ae-feedback.incorrect{background:#3b292a;border:1px solid #956a65;color:#ffe0d7}
+.resci-ae-hint{padding:11px 13px;border-left:3px solid #91c0f5;background:#17313f;border-radius:5px;color:#d9ecfc;font-size:13px;line-height:1.75}
+.resci-ae-work{margin-top:12px;padding:13px;background:#09232a;border:1px solid #5a917d;border-radius:10px}
+.resci-ae-work>strong{font-size:13px;color:#afe8c2}.resci-ae-work .paper-equation{margin:9px 0;font-size:clamp(14px,2vw,18px)}
+.resci-ae-work p{color:#bbd4c8;font-size:13px;line-height:1.65;margin:9px 0 0}
+.resci-ae-final{margin:17px 0}.resci-ae-final .card{background:#13362f;border:1px solid #568b69}
+.resci-ae-final h3{margin:7px 0 10px}.resci-ae-final .resci-ae-total{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:10px 0;border-bottom:1px solid #42695a}
+.resci-ae-final .resci-ae-total strong{font-size:clamp(16px,3vw,24px);color:#baf5ca}
+.resci-ae-final p{font-size:13px;color:#cbded0;line-height:1.7}
+.resci-ae-footer{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.resci-lab-title{margin:30px 0 15px}
+@media(max-width:960px){.resci-ae-map{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:580px){.resci-course{padding:12px}.resci-ae-map{grid-template-columns:repeat(2,minmax(0,1fr))}.resci-facts{grid-template-columns:repeat(2,minmax(0,1fr))}.resci-course-controls .btn{flex:1}.resci-exercise-intro{padding:12px}.resci-ae-q{padding:12px}.resci-ae-answer input{max-width:none;min-width:150px}.resci-ae-answer .btn{flex:1}.resci-ae-footer .btn{flex:1}.resci-course-head .lead{font-size:13px}}
+
 </style></head><body><div class="app">
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-top"><div class="brand"><div class="brandmark">V</div><div><div class="brandname">véspera<span class="accent">.</span></div><div class="brandsub">STUDY OS / INTENSIVO</div></div></div><button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Alternar navegação">☰ Menu</button></div>
@@ -96,7 +143,7 @@ html{scroll-padding-top:32px}body{min-width:320px}
       <div class="nav-title" style="margin-top:18px">DISCIPLINAS DA PROVA</div>
       <button class="navbtn" data-view="etica"><span class="glyph">E</span>Ética · aulas e questões</button>
       <button class="navbtn" data-view="dmn"><span class="glyph">D</span>DMN · aulas e questões</button>
-      <button class="navbtn" data-view="rescisao-contas"><span class="glyph">R$</span>Rescisão · cálculo no papel</button>
+      <button class="navbtn" data-view="rescisao-contas"><span class="glyph">R$</span>Rescisão · 12 exercícios</button>
       <button class="navbtn" data-view="teoria"><span class="glyph">02</span>Rescisão: teoria profunda</button>
       <button class="navbtn" data-view="casos"><span class="glyph">⚖</span>Casos de rescisão</button>
       <button class="navbtn" data-view="quiz"><span class="glyph">?</span>Quiz da teoria</button>
@@ -215,6 +262,46 @@ html{scroll-padding-top:32px}body{min-width:320px}
     <section class="view" id="view-rescisao-contas">
       <div class="sectionhead"><div><p class="eyebrow">CÁLCULOS DE RESCISÃO / PAPEL E CANETA</p><h1>Como calcular uma rescisão, linha por linha.</h1><p class="lead">Aprenda a organizar os dados, calcular salário proporcional, 13º, férias, terço constitucional, aviso-prévio e multa do FGTS. O resultado aparece aos poucos, para você fazer antes no caderno.</p></div><span class="pill green">3 cenários · contas editáveis</span></div>
       <div class="resci-warning"><strong>Atenção:</strong> estes são exemplos escolares simplificados, de contrato CLT por prazo indeterminado. Não são uma calculadora jurídica completa. O resultado real depende das datas e avos corretos (incluindo eventual projeção do aviso), médias, adicionais, férias pendentes, convenção coletiva e descontos. A multa do FGTS é separada das verbas pagas diretamente.</div>
+      
+      <div class="resci-course" id="resciAE">
+        <div class="resci-course-head">
+          <div><p class="eyebrow">NOVA AULA · MESMO MODELO DO ROI</p><h2>Rescisão em 5 passos: A até E.</h2><p class="lead">12 exercícios com os mesmos tipos de empresas da lista de ROI. Anote os dados, faça a conta no caderno, digite seu resultado e confira. Use a dica somente se precisar.</p></div>
+          <span class="pill green" id="resciAEStatus">Questão 01 de 12</span>
+        </div>
+        <div class="resci-ae-map" aria-label="Passos da rescisão">
+          <div><strong>A</strong><span>Saldo de salário</span><small>salário ÷ 30 × dias</small></div>
+          <div><strong>B</strong><span>13º proporcional</span><small>salário ÷ 12 × avos</small></div>
+          <div><strong>C</strong><span>Férias + 1/3</span><small>férias + férias ÷ 3</small></div>
+          <div><strong>D</strong><span>Aviso indenizado</span><small>conforme modalidade</small></div>
+          <div><strong>E</strong><span>Multa do FGTS</span><small>40%, 20% ou 0%</small></div>
+        </div>
+        <div class="resci-course-controls">
+          <label for="resciAESelect">Escolher exercício</label>
+          <select class="select" id="resciAESelect" aria-label="Escolher um dos 12 exercícios de rescisão"></select>
+          <button type="button" class="btn ghost" id="resciAEPrev">← Anterior</button>
+          <button type="button" class="btn ghost" id="resciAENext">Próximo →</button>
+        </div>
+        <div class="resci-exercise-intro">
+          <p class="eyebrow" id="resciAEPill">EXERCÍCIO 01</p>
+          <h3 id="resciAETitle">Indústria de Calçados</h3>
+          <p id="resciAEStory"></p>
+          <div id="resciAEFacts" class="resci-facts"></div>
+          <div class="resci-exercise-note">Neste treino, considere o salário mensal fixo, <strong>sem outros descontos ou adicionais</strong>, sem férias antigas pendentes, e os avos já apurados conforme o enunciado (inclusive a projeção do aviso, quando cabível). Para pedido de demissão, considere o aviso cumprido ou dispensado sem desconto. A base do FGTS já foi informada para calcular a multa.</div>
+        </div>
+        <div class="resci-ae-progress"><div class="paper-progress"><span id="resciAEProgress" style="width:0%"></span></div><strong id="resciAECount">0 de 5 etapas corretas</strong></div>
+        <div id="resciAEQuestions" class="resci-ae-questions" aria-live="polite"></div>
+        <div id="resciAEFinal" class="resci-ae-final"></div>
+        <div class="resci-ae-footer">
+          <button type="button" id="resciAEAll" class="btn">Ver todas as resoluções</button>
+          <button type="button" id="resciAEReset" class="btn ghost">Apagar respostas desta questão</button>
+          <button type="button" id="resciAENextBottom" class="btn primary">Próximo exercício →</button>
+        </div>
+      </div>
+      <div class="resci-lab-title">
+        <p class="eyebrow">LABORATÓRIO EXTRA</p>
+        <h2 class="section-title">Agora mude os números e faça novamente.</h2>
+        <p class="small">Abaixo fica a versão com valores editáveis e dez linhas detalhadas, que já existia no site. Ela complementa os 12 exercícios de A a E.</p>
+      </div>
       <div class="study-matter-tabs"><button class="btn primary" data-resci-preset="sem">Sem justa causa</button><button class="btn" data-resci-preset="pedido">Pedido de demissão</button><button class="btn" data-resci-preset="acordo">Acordo entre as partes</button></div>
       <div class="paper-layout">
         <div class="paper-sheet">
@@ -779,6 +866,124 @@ document.getElementById('view-rescisao-contas').addEventListener('click',functio
 });
 resciIds.forEach(function(id){document.getElementById(id).addEventListener('input',function(){resciVisible=0;renderResci();});});
 renderResci();
+
+
+/* Prática de rescisão: 12 empresas e cinco passos A-E, no formato da lista de ROI. */
+const RESCI_EXERCISES = [
+  [3000,12,8,8,10000,30,'sem'],
+  [4200,18,9,7,18000,30,'acordo'],
+  [2500,10,5,5,7000,0,'pedido'],
+  [3500,23,10,10,16000,33,'sem'],
+  [4800,15,6,11,50000,36,'sem'],
+  [2600,20,4,4,12000,30,'acordo'],
+  [3800,8,11,8,22000,0,'pedido'],
+  [3200,14,7,6,10000,30,'sem'],
+  [2900,21,10,11,21000,30,'acordo'],
+  [6100,17,3,3,79000,39,'sem'],
+  [2300,9,10,10,12000,0,'pedido'],
+  [2800,26,12,9,25000,30,'acordo']
+].map((z,i)=>({id:i+1,industry:ROI_CASES[i].title,salary:z[0],days:z[1],avos13:z[2],avosFerias:z[3],fgtsBase:z[4],notice:z[5],kind:z[6]}));
+const RCS_KINDS={sem:'Dispensa sem justa causa',pedido:'Pedido de demissão',acordo:'Rescisão por acordo'};
+let rcsId=1;
+const RCS_STORE='vespera_rescisao_ae_v1';
+let rcsState={};
+try{const v=JSON.parse(localStorage.getItem(RCS_STORE)||'{}');if(v&&typeof v==='object')rcsState=v;}catch(e){}
+function rcsSave(){try{localStorage.setItem(RCS_STORE,JSON.stringify(rcsState));}catch(e){}}
+function rcsEntry(){if(!rcsState[rcsId])rcsState[rcsId]={answers:{},marked:{},shown:{},hints:{}};const a=rcsState[rcsId];for(const k of ['answers','marked','shown','hints'])if(!a[k]||typeof a[k]!=='object')a[k]={};return a;}
+function rcsRound(v){return Math.round((v+Number.EPSILON)*100)/100;}
+function rcsParse(raw){
+ let s=String(raw||'').trim().replace(/[\sR$]/g,'');
+ if(!s)return NaN;
+ if(s.includes(','))s=s.replace(/\./g,'').replace(',','.');
+ else if(/^\d{1,3}(\.\d{3})+$/.test(s))s=s.replace(/\./g,'');
+ return /^-?\d+(\.\d+)?$/.test(s)?Number(s):NaN;
+}
+function rcsSteps(x){
+ const s=x.salary,day=x.days,t=x.avos13,v=x.avosFerias,fg=x.fgtsBase,n=x.notice,kind=x.kind;
+ const A=rcsRound(s/30*day);
+ const B=rcsRound(s/12*t);
+ const fv=rcsRound(s/12*v);
+ const bonus=rcsRound(fv/3);
+ const C=rcsRound(fv+bonus);
+ const D=rcsRound(s/30*n*(kind==='sem'?1:kind==='acordo'?.5:0));
+ const percent=kind==='sem'?40:kind==='acordo'?20:0;
+ const E=rcsRound(fg*percent/100);
+ const gross=rcsRound(A+B+C+D);
+ const steps=[
+  {key:'A',title:'Saldo de salário',goal:'Quanto a pessoa ganhou pelos '+day+' dias trabalhados no último mês?',formula:'Salário ÷ 30 × dias trabalhados',hint:'Divida '+rcMoney(s)+' por 30. O resultado é o salário de UM dia. Multiplique por '+day+'.',work:rcMoney(s)+' ÷ 30 = '+rcMoney(s/30)+' por dia; '+rcMoney(s/30)+' × '+day+' = '+rcMoney(A),why:'Só entram aqui os dias efetivamente trabalhados no mês da saída. Esse é o passo A, separado do 13º.',value:A},
+  {key:'B',title:'13º salário proporcional',goal:'Quanto valem '+t+' avos de décimo terceiro?',formula:'Salário ÷ 12 × avos de 13º',hint:'A palavra “avos” quer dizer partes de 12. Cada avo corresponde a '+rcMoney(s)+' ÷ 12.',work:rcMoney(s)+' ÷ 12 × '+t+' = '+rcMoney(B),why:'O enunciado informa os avos devidos. Em situações reais, meses com pelo menos 15 dias e projeção do aviso podem alterar a contagem.',value:B},
+  {key:'C',title:'Férias proporcionais + 1/3',goal:'Calcule as férias referentes a '+v+' avos e some o terço constitucional.',formula:'(Salário ÷ 12 × avos de férias) + (férias ÷ 3)',hint:'Primeiro: '+rcMoney(s)+' ÷ 12 × '+v+'. Segundo: pegue esse resultado e divida por 3. Terceiro: some.',work:rcMoney(s)+' ÷ 12 × '+v+' = '+rcMoney(fv)+'; '+rcMoney(fv)+' ÷ 3 = '+rcMoney(bonus)+'; '+rcMoney(fv)+' + '+rcMoney(bonus)+' = '+rcMoney(C),why:'O terço é um adicional SOBRE as férias calculadas, não uma parcela genérica de todo o salário. Não há férias antigas pendentes neste exemplo.',value:C},
+  {key:'D',title:'Aviso-prévio indenizado',goal:kind==='pedido'?'Quanto se recebe de aviso no pedido de demissão deste caso?':kind==='acordo'?'Quanto vale metade do aviso indenizado de '+n+' dias?':'Quanto vale o aviso indenizado de '+n+' dias?',formula:kind==='pedido'?'Pedido de demissão: aviso indenizado recebido = 0':kind==='acordo'?'Salário ÷ 30 × dias de aviso × 50%':'Salário ÷ 30 × dias de aviso',hint:kind==='pedido'?'Neste cenário o aviso do empregado foi cumprido ou dispensado sem desconto. Não existe aviso-prévio indenizado a receber.':kind==='acordo'?'Calcule '+rcMoney(s)+' ÷ 30 × '+n+' e depois divida por 2.':'Calcule '+rcMoney(s)+' ÷ 30 × '+n+'.',work:kind==='pedido'?'Pedido de demissão: aviso recebido = '+rcMoney(0):rcMoney(s)+' ÷ 30 × '+n+(kind==='acordo'?' × 0,50':'')+' = '+rcMoney(D),why:kind==='pedido'?'O empregado não ganha aviso indenizado no pedido de demissão. O enunciado exclui eventual desconto por falta de cumprimento.':kind==='acordo'?'No acordo, o aviso prévio INDENIZADO é pago pela metade. Um aviso trabalhado segue outra lógica.':'Na dispensa sem justa causa, o aviso indenizado é pago conforme os dias devidos informados.',value:D},
+  {key:'E',title:'Multa do FGTS',goal:'Calcule '+percent+'% da base informada de '+rcMoney(fg)+'.',formula:'Base legal dos depósitos do FGTS × '+percent+'%',hint:percent===0?'No pedido de demissão não existe multa do FGTS.':'Transforme '+percent+'% em '+(percent/100).toLocaleString('pt-BR',{maximumFractionDigits:2})+' e multiplique por '+rcMoney(fg)+'.',work:percent===0?'Base de FGTS × 0% = '+rcMoney(0):rcMoney(fg)+' × '+(percent/100).toLocaleString('pt-BR',{maximumFractionDigits:2})+' = '+rcMoney(E),why:'Esta multa vai para a conta vinculada do FGTS, não é somada ao valor bruto das verbas pagas diretamente. A base já foi dada na questão.',value:E}
+ ];
+ return {steps,gross,penalty:E,kind};
+}
+function rcsFact(label,value){return '<div class="resci-fact"><span>'+esc(label)+'</span><b>'+esc(String(value))+'</b></div>';}
+function rcsMarkupStep(step,entry){
+ const k=step.key,shown=!!entry.shown[k],hinted=!!entry.hints[k],mark=entry.marked[k]===true?'correct':entry.marked[k]===false?'incorrect':'';
+ const content='<div class="resci-ae-head"><span class="resci-ae-letter">'+k+'</span><div><h4>'+esc(step.title)+'</h4><span class="small">'+esc(step.formula)+'</span></div></div>'+
+ '<p class="resci-ae-prompt">'+esc(step.goal)+'</p>'+
+ '<div class="resci-ae-answer"><label for="rcsInput'+k+'">Seu resultado (R$)</label><input id="rcsInput'+k+'" data-rcs-input="'+k+'" inputmode="decimal" autocomplete="off" placeholder="Digite: 1.200,00" value="'+esc(entry.answers[k]||'')+'"/><button class="btn primary" type="button" data-rcs-check="'+k+'">Conferir</button></div>'+
+ (mark?'<div class="resci-ae-feedback '+mark+'">'+(mark==='correct'?'Correto. Você calculou '+rcMoney(step.value)+'.':'Ainda não. Revise os números e a fórmula antes de tentar de novo.')+'</div>':'')+
+ '<div class="resci-ae-actions"><button class="btn ghost" type="button" data-rcs-hint="'+k+'">'+(hinted?'Esconder dica':'Entender a operação')+'</button><button class="btn" type="button" data-rcs-show="'+k+'">'+(shown?'Esconder resolução':'Ver conta resolvida')+'</button></div>'+
+ (hinted?'<div class="resci-ae-hint"><strong>Como fazer no papel:</strong> '+esc(step.hint)+'</div>':'')+
+ (shown?'<div class="resci-ae-work"><strong>Conta que você escreve na prova:</strong><div class="paper-equation">'+esc(step.work)+'</div><div class="paper-result">Resultado '+k+': '+rcMoney(step.value)+'</div><p>'+esc(step.why)+'</p></div>':'');
+ return '<article class="resci-ae-q'+(mark==='correct'?' complete':'')+'" id="rcsStep'+k+'">'+content+'</article>';
+}
+function rcsRender(){
+ const x=RESCI_EXERCISES[rcsId-1],entry=rcsEntry(),calc=rcsSteps(x);
+ const ok=calc.steps.filter(s=>entry.marked[s.key]===true).length;
+ document.getElementById('resciAESelect').value=String(rcsId);
+ document.getElementById('resciAEStatus').textContent='Questão '+String(rcsId).padStart(2,'0')+' de 12';
+ document.getElementById('resciAEPill').textContent='EXERCÍCIO '+String(rcsId).padStart(2,'0')+' / 12';
+ document.getElementById('resciAETitle').textContent=x.industry;
+ document.getElementById('resciAEStory').textContent='Na empresa '+x.industry+', um funcionário encerra o contrato por '+RCS_KINDS[x.kind].toLowerCase()+'. Resolva as cinco verbas do acerto com os dados apresentados e depois encontre o total bruto do acerto.';
+ document.getElementById('resciAEFacts').innerHTML=[
+   rcsFact('Modalidade',RCS_KIN[x.kind]),rcsFact('Salário por mês',rcMoney(x.salary)),rcsFact('Dias trabalhados',x.days),
+   rcsFact('Avos do 13º',x.avos13+'/12'),rcsFact('Avos das férias',x.avosFerias+'/12'),rcsFact('Aviso indenizado (dias)',x.notice),
+   rcsFact('Base de FGTS',rcMoney(x.fgtsBase))
+ ].join('');
+ document.getElementById('resciAECount').textContent=ok+' de 5 etapas corretas';
+ document.getElementById('resciAEProgress').style.width=(ok/5*100)+'%';
+ document.getElementById('resciAEQuestions').innerHTML=calc.steps.map(s=>rcsMarkupStep(s,entry)).join('');
+ const complete=ok===5,allRevealed=calc.steps.every(s=>entry.shown[s.key]);
+ const results='<div class="card"><p class="eyebrow">'+(complete?'EXERCÍCIO CONCLUÍDO':'GABARITO LIBERADO')+'</p><h3>Conferência final do acerto</h3>'+
+ '<div class="resci-ae-total"><span>Bruto pago diretamente (A + B + C + D)</span><strong>'+rcMoney(calc.gross)+'</strong></div>'+
+ '<div class="resci-ae-total"><span>Multa de FGTS, separada (E)</span><strong>'+rcMoney(calc.penalty)+'</strong></div>'+
+ '<p><strong>Por que separar?</strong> O total do acerto soma saldo de salário, 13º, férias com 1/3 e aviso indenizado devido. A multa é recolhida na conta de FGTS; não misture os dois valores na mesma soma.</p>'+
+ '<p><strong>Importante:</strong> valores brutos didáticos, sem descontos, adicionais ou outras verbas da rescisão real.</p></div>';
+ document.getElementById('resciAEFinal').innerHTML=complete||allRevealed?results:'<p class="paper-muted">Termine as cinco contas ou revele as resoluções para conferir o total bruto e a multa do FGTS.</p>';
+}
+for(const x of RESCI_EXERCISES){
+ const opt=document.createElement('option');opt.value=String(x.id);opt.textContent=String(x.id).padStart(2,'0')+' · '+x.industry;document.getElementById('resciAESelect').appendChild(opt);
+}
+function rcsChoose(id){rcsId=Math.min(12,Math.max(1,id));rcsRender();}
+document.getElementById('resciAESelect').addEventListener('change',e=>rcsChoose(Number(e.target.value)||1));
+document.getElementById('resciAE').addEventListener('input',e=>{
+ const inp=e.target.closest('[data-rcs-input]');
+ if(inp){
+   const entry=rcsEntry(),k=inp.dataset.rcsInput;
+   entry.answers[k]=inp.value;delete entry.marked[k];rcsSave();
+   const card=inp.closest('.resci-ae-q'),feedback=card.querySelector('.resci-ae-feedback');
+   if(feedback)feedback.remove();card.classList.remove('complete');
+ }
+});
+document.getElementById('resciAE').addEventListener('click',e=>{
+ const next=e.target.closest('#resciAENext, #resciAENextBottom');
+ if(next){rcsChoose(rcsId===12?1:rcsId+1);return;}
+ if(e.target.closest('#resciAEPrev')){rcsChoose(rcsId===1?12:rcsId-1);return;}
+ const all=e.target.closest('#resciAEAll');
+ if(all){const entry=rcsEntry();for(const k of ['A','B','C','D','E'])entry.shown[k]=true;rcsSave();rcsRender();return;}
+ const reset=e.target.closest('#resciAEReset');
+ if(reset){rcsState[rcsId]={answers:{},marked:{},shown:{},hints:{}};rcsSave();rcsRender();return;}
+ const hint=e.target.closest('[data-rcs-hint]');
+ if(hint){const entry=rcsEntry(),key=hint.dataset.rcsHint;entry.hints[key]=!entry.hints[key];rcsSave();rcsRender();return;}
+ const show=e.target.closest('[data-rcs-show]');
+ if(show){const entry=rcsEntry(),key=show.dataset.rcsShow;entry.shown[key]=!entry.shown[key];rcsSave();rcsRender();return;}
+ const check=e.target.closest('[data-rcs-check]');
+ if(check){const entry=rcsEntry(),k=check.dataset.rcsCheck,c=rcsSteps(RESCI_EXERCISES[rcsId-1]).steps.find(s=>s.key===k);const submitted=rcsParse(entry.answers[k]);entry.marked[k]=Number.isFinite(submitted)&&Math.abs(submitted-c.value)<=0.011;rcsSave();rcsRender();return;}
+});
+rcsRender();
 
 renderRoadmap();renderOriginal();newRandom();newPercent();renderTheory();nextQuiz();nextScenario();calcPercent();progress();
 if(location.hash&&VIEWS.includes(location.hash.slice(1)))go(location.hash.slice(1));
