@@ -12,11 +12,53 @@ html{scroll-padding-top:32px}body{min-width:320px}
 .roadmap .step{grid-template-columns:42px minmax(0,1fr) 60px auto auto;align-items:center}
 .roadmap .step .duration{white-space:nowrap}
 @media(max-width:700px){.roadmap .step{grid-template-columns:38px minmax(0,1fr) auto;gap:8px}.roadmap .step .duration{grid-column:3;grid-row:1}.roadmap .step [data-route-done]{grid-column:2;grid-row:2}.roadmap .step [data-jump]{grid-column:3;grid-row:2}}
+
+/* Aula de ROI no papel: leitura clara, com revelação progressiva. */
+.paper-modebar{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 17px}
+.paper-modebar .btn{white-space:normal;min-height:46px;text-align:left}
+.paper-cheats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:0 0 22px}
+.paper-cheats>div{border:1px solid #31534e;background:#0e2926;border-radius:13px;padding:13px;min-width:0}
+.paper-cheats small{display:block;color:#91dbb0;letter-spacing:1px;font-size:10px;font-weight:850}
+.paper-cheats b{display:block;color:#f0fff5;line-height:1.3;margin:6px 0;font-size:13px}
+.paper-cheats span{display:block;color:#afc9bf;font-size:11px;line-height:1.4}
+.paper-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(250px,.85fr);gap:16px}
+.paper-sheet{background:#0d2127;border:1px solid #426d60;border-radius:18px;overflow:hidden;padding:clamp(16px,3%,27px);min-width:0}
+.paper-sheet-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:19px}
+.paper-stepcount{font-size:12px;color:#b3e8c4;font-weight:700}
+.paper-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.paper-controls label{font-size:12px;font-weight:800;color:#bfdbc9}
+.paper-controls select{min-width:220px;flex:1}
+.paper-instruction{background:#153a32;color:#e2fbee;border:1px solid #386954;border-radius:12px;padding:12px 15px;font-size:13px;line-height:1.6;margin:17px 0}
+.paper-progress{height:8px;border-radius:20px;overflow:hidden;background:#233a3b;margin-bottom:12px}
+.paper-progress span{display:block;height:100%;background:#8de5b1;transition:width .24s}
+.paper-actions{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.paper-actions .btn{white-space:normal}
+.paper-lines{display:grid;gap:10px}
+.paper-line{border:1px solid #304b51;background:#0d2229;border-radius:13px;padding:17px;min-width:0;transition:border-color .2s}
+.paper-line.revealed{background:linear-gradient(135deg,#12342f,#0c272b);border-color:#518a6b}
+.paper-line-head{display:flex;align-items:center;gap:12px}
+.paper-line-number{font:800 13px ui-monospace,monospace;display:grid;place-items:center;background:#23453c;border-radius:9px;color:#c1f8d1;width:35px;height:35px;flex:0 0 35px}
+.paper-line h3{margin:0;color:#eafff1;font-size:15px}
+.paper-prompt{color:#b5ccc9;font-size:13px;margin:9px 0 0}
+.paper-equation{display:block;background:#08191e;border-left:3px solid #8be8b5;border-radius:6px;padding:14px 16px;margin:13px 0 9px;color:#f5fff8;font-size:clamp(15px,1.5vw,19px);font-weight:850;overflow-wrap:anywhere;line-height:1.6;font-variant-numeric:tabular-nums}
+.paper-result{color:#adf5c4;font-weight:850;font-size:15px}
+.paper-reason{border-top:1px solid #2d5447;padding-top:9px;margin:11px 0 0;color:#bad6cc;font-size:13px;line-height:1.7}
+.paper-hidden-equation{border:1px dashed #3b635a;border-radius:9px;padding:10px 13px;margin-top:12px;color:#7caaa0;font-weight:700;letter-spacing:2px;font-size:15px}
+.paper-line.revealed .paper-line-number{background:#b9f3cd;color:#0a3022}
+.paper-finish{margin-top:17px}
+.paper-finish .paper-done{border:1px solid #487b64;background:#153e31;padding:15px;border-radius:11px;color:#e4fff0}
+.paper-skeleton{background:#0a2229;border:1px solid #315650;border-radius:9px;padding:11px;color:#d0eee0;font:600 12px ui-monospace,Consolas,monospace;white-space:normal;margin:8px 0;line-height:1.65}
+.paper-aside{display:grid;align-content:start;gap:12px}.paper-aside .card{min-width:0}.paper-aside h3{margin:5px 0 16px}.paper-aside p{font-size:13px;line-height:1.75;color:#b8d4cb}
+.paper-muted{color:#92b8a8;font-size:12px}
+@media(max-width:1180px){.paper-cheats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:950px){.paper-layout{grid-template-columns:1fr}.paper-cheats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.paper-sheet{padding:13px}.paper-cheats{grid-template-columns:repeat(2,minmax(0,1fr))}.paper-cheats>div{padding:10px}.paper-controls select{min-width:150px;width:100%}.paper-actions .btn{flex:1;min-width:calc(50% - 8px)}.paper-line{padding:13px}.paper-equation{font-size:16px;padding:11px}}
+
 </style></head><body><div class="app">
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-top"><div class="brand"><div class="brandmark">V</div><div><div class="brandname">véspera<span class="accent">.</span></div><div class="brandsub">STUDY OS / INTENSIVO</div></div></div><button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Alternar navegação">☰ Menu</button></div>
     <div class="nav-wrap"><div class="nav-title">CENTRAL DE TREINO</div><nav class="nav" id="navigation">
-      <button class="navbtn active" data-view="inicio"><span class="glyph">⌂</span>Painel</button>
+      <button class="navbtn active" data-view="inicio"><span class="glyph">⌂</span>Painel</button><button class="navbtn" data-view="papel"><span class="glyph">✎</span>Aula: cálculo no papel</button>
       <button class="navbtn" data-view="lista"><span class="glyph">01</span>12 contas do professor</button>
       <button class="navbtn" data-view="infinito"><span class="glyph">∞</span>Treino infinito ROI</button>
       <button class="navbtn" data-view="percentual"><span class="glyph">%</span>Despesas em %</button>
@@ -31,14 +73,77 @@ html{scroll-padding-top:32px}body{min-width:320px}
   <main class="main">
     <div class="topline"><div class="crumb">VÉSPERA / <span id="breadcrumb">PAINEL</span></div><div class="top-right"><span><span class="live-dot"></span> progresso local</span><div class="progress-mini"><span id="globalBar"></span></div><strong id="globalLabel">0%</strong></div></div>
     <section class="view active" id="view-inicio">
-      <div class="hero"><div class="hero-left"><p class="eyebrow">OPERAÇÃO: PROVA AMANHÃ</p><h1 class="bigtitle">Entenda a teoria.<br><em>Domine as contas.</em></h1><p class="lead">Um site direto ao ponto, feito a partir dos seus materiais. <strong>ROI é só prática</strong>, com contas digitadas por você. <strong>Rescisão tem estudo aprofundado</strong>, exemplos, comparações e casos de prova.</p><div class="hero-actions"><button class="btn primary large" data-jump="lista">Começar pelas 12 contas ↗</button><button class="btn large" data-jump="teoria">Estudar rescisão</button></div></div><div class="hero-art"><div class="art-label">ESTUDO INTENSIVO · SÃO PAULO / 2026</div><div class="art-formula"><strong>Resolver.</strong><br>Conferir.<br>Repetir.</div><div class="art-caption">Funciona offline e salva no seu navegador.</div></div></div>
+      <div class="hero"><div class="hero-left"><p class="eyebrow">OPERAÇÃO: PROVA AMANHÃ</p><h1 class="bigtitle">Entenda a teoria.<br><em>Domine as contas.</em></h1><p class="lead">Um site direto ao ponto, feito a partir dos seus materiais. <strong>ROI é só prática</strong>, com contas digitadas por você. <strong>Rescisão tem estudo aprofundado</strong>, exemplos, comparações e casos de prova.</p><div class="hero-actions"><button class="btn primary large" data-jump="papel">Aprender a calcular no papel ↗</button><button class="btn large" data-jump="teoria">Estudar rescisão</button></div></div><div class="hero-art"><div class="art-label">ESTUDO INTENSIVO · SÃO PAULO / 2026</div><div class="art-formula"><strong>Resolver.</strong><br>Conferir.<br>Repetir.</div><div class="art-caption">Funciona offline e salva no seu navegador.</div></div></div>
       <div class="grid four" style="margin-bottom:28px"><div class="card"><div class="kicker">EXERCÍCIOS ORIGINAIS</div><div class="metric">12</div><p class="small">36 respostas numéricas</p></div><div class="card"><div class="kicker">CAPÍTULOS DA APOSTILA</div><div class="metric">12</div><p class="small">Com casos e comparações</p></div><div class="card"><div class="kicker">PERGUNTAS DA TEORIA</div><div class="metric">32</div><p class="small">Correção justificada</p></div><div class="card"><div class="kicker">MINHA PRECISÃO</div><div class="metric" id="homeAccuracy">—</div><p class="small" id="homeAccuracySub">Ainda sem respostas</p></div></div>
       <h2 class="section-title">Escolha por onde começar</h2><p class="section-desc">Uma prova exige contas. A outra exige interpretar e diferenciar os tipos de rescisão.</p>
       <div class="grid two"><article class="card topiccard" role="button" tabindex="0" data-topicgo="lista"><span class="pill green">ADMINISTRAÇÃO · ROI</span><div class="topic-icon">∑</div><h3>Laboratório de cálculos</h3><p>12 exercícios oficiais digitáveis, passo a passo, treino com números novos, despesas percentuais e simulador.</p><span class="bottom">Abrir laboratório ↗</span></article><article class="card topiccard" role="button" tabindex="0" data-topicgo="teoria"><span class="pill orange">GESTÃO DE PESSOAS · RESCISÃO</span><div class="topic-icon" style="color:var(--orange)">§</div><h3>Teoria profunda e aplicada</h3><p>12 capítulos, 5 modalidades, tabela de direitos, exemplos de falta grave, situações práticas e 32 questões.</p><span class="bottom">Abrir apostila interativa ↗</span></article></div>
       <h2 class="section-title" style="margin-top:31px">Rota de estudo da noite</h2><p class="section-desc">Sugestão de 2h45, ajustável. Marque o que terminou, sem burocracia.</p><div class="roadmap" id="roadmap"></div>
       <div class="tip" style="margin-top:24px"><strong>Os materiais usados:</strong> “Exercícios de ROI 2026 ADMS” (12 casos), “ROI Pricing Architecture” (exemplo com despesas de 15%) e “Apostila sobre rescisão de contrato de trabalho” (2 páginas). O material de Sokovia foi retirado porque não faz parte desta revisão.</div>
     </section>
-    <section class="view" id="view-lista"><div class="sectionhead"><div><p class="eyebrow">01 / CONTA NA PRÁTICA</p><h1>As 12 contas do professor.</h1><p class="lead">Os mesmos dados da lista enviada. Para cada caso: <strong>lucro por unidade → preço → ROI comprovado</strong>. Digite a resposta e receba a correção de cada etapa.</p></div></div><div class="toolbar"><label class="small" for="caseSelect">Exercício:</label><select id="caseSelect" class="select"></select><button class="btn ghost" id="casePrev">← Anterior</button><button class="btn ghost" id="caseNext">Próximo →</button><span class="pill green" id="caseProgress">0 / 12 dominados</span></div><div id="originalExercise"></div><div class="hero-actions"><button class="btn primary" data-jump="infinito">Praticar com números diferentes ↗</button><button class="btn" data-jump="percentual">Treinar despesas percentuais</button></div></section>
+    
+    <section class="view" id="view-papel">
+      <div class="sectionhead">
+        <div><p class="eyebrow">AULA PRÁTICA / RESOLUÇÃO À MÃO</p><h1>Como fazer a conta no papel.</h1>
+          <p class="lead">Aqui você não recebe um número pronto: aprende <strong>qual operação escrever, por que ela vem agora e como conferir a resposta</strong>. Pegue uma folha, tente primeiro e revele uma linha de cada vez.</p>
+        </div><span class="pill green">12 exercícios originais</span>
+      </div>
+      <div class="paper-modebar" role="group" aria-label="Escolher tipo de conta">
+        <button class="btn primary" type="button" data-paper-mode="oficial">01 · ROI com custo e despesa por unidade</button>
+        <button class="btn ghost" type="button" data-paper-mode="percentual">02 · Despesa de 15% sobre o preço</button>
+      </div>
+      <div class="paper-cheats">
+        <div><small>PASSO A</small><b>ROI % ÷ 100</b><span>20% vira 0,20</span></div>
+        <div><small>PASSO B</small><b>Investimento × taxa</b><span>Encontre o lucro total desejado</span></div>
+        <div><small>PASSO C</small><b>Lucro total ÷ quantidade</b><span>Descubra o lucro por produto</span></div>
+        <div><small>PASSO D</small><b>Custo + despesa + lucro</b><span>Chegue ao preço unitário</span></div>
+        <div><small>PASSO E</small><b>Lucro ÷ investimento × 100</b><span>Comprove o percentual do ROI</span></div>
+      </div>
+      <div class="paper-layout">
+        <div>
+          <div class="paper-sheet">
+            <div class="paper-sheet-head"><span class="pill green" id="paperLabel">EXERCÍCIO DO PROFESSOR</span><span class="paper-stepcount" id="paperCounter">0 / 11 passos revelados</span></div>
+            <div id="paperCaseControls" class="paper-controls">
+              <label for="paperCaseSelect">Escolha a questão</label>
+              <select id="paperCaseSelect" class="select"></select>
+              <button id="paperPrev" class="btn ghost smallbtn" type="button" title="Exercício anterior">←</button>
+              <button id="paperNext" class="btn ghost smallbtn" type="button" title="Próximo exercício">→</button>
+            </div>
+            <h2 id="paperTitle" class="section-title"></h2>
+            <p id="paperIntro" class="small"></p>
+            <div id="paperFacts"></div>
+            <div class="paper-instruction"><strong>COMO USAR:</strong> leia o título da próxima linha, faça a conta no papel e só então clique em <strong>Revelar próxima linha</strong>. Você pode esconder tudo e refazer.</div>
+            <div class="paper-progress"><span id="paperFill"></span></div>
+            <div class="paper-actions">
+              <button type="button" class="btn primary" id="paperReveal">Revelar próxima linha ↓</button>
+              <button type="button" class="btn" id="paperAll">Mostrar gabarito completo</button>
+              <button type="button" class="btn ghost" id="paperReset">Esconder e refazer ↻</button>
+            </div>
+            <div id="paperLines" class="paper-lines" aria-live="polite"></div>
+            <div class="paper-finish" id="paperFinish"></div>
+          </div>
+        </div>
+        <aside class="paper-aside">
+          <div class="card"><p class="eyebrow">O QUE VOCÊ ESCREVE NA PROVA</p>
+            <h3>Seu esqueleto de resposta</h3>
+            <div class="paper-skeleton">1) ROI decimal = ____ ÷ 100 = ____</div>
+            <div class="paper-skeleton">2) Lucro total = I × taxa = ____</div>
+            <div class="paper-skeleton">3) Lucro/un. = lucro ÷ Q = ____</div>
+            <div class="paper-skeleton">4) Preço = custo + despesa + lucro/un. = ____</div>
+            <div class="paper-skeleton">5) Lucro real = (preço − custo − despesa) × Q = ____</div>
+            <div class="paper-skeleton">6) ROI = lucro real ÷ I × 100 = ____%</div>
+            <p class="small">Copie este roteiro no caderno. É a ordem essencial exigida pelos 12 exercícios da lista.</p>
+          </div>
+          <div class="card"><p class="eyebrow">MACETES DE CONTA À MÃO</p>
+            <h3>Não dependa da calculadora</h3>
+            <p><strong>20% de 500.000:</strong> 10% é 50.000, então 20% é 100.000.</p>
+            <p><strong>100.000 ÷ 5.000:</strong> risque três zeros nos dois números; sobra 100 ÷ 5 = 20.</p>
+            <p><strong>70 ÷ 0,85:</strong> multiplique os dois lados por 100: 7.000 ÷ 85 ≈ 82,35.</p>
+            <p><strong>Conferência:</strong> o preço precisa pagar custo, despesa e ainda deixar o lucro-meta.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+<section class="view" id="view-lista"><div class="sectionhead"><div><p class="eyebrow">01 / CONTA NA PRÁTICA</p><h1>As 12 contas do professor.</h1><p class="lead">Os mesmos dados da lista enviada. Para cada caso: <strong>lucro por unidade → preço → ROI comprovado</strong>. Digite a resposta e receba a correção de cada etapa.</p></div></div><div class="tip" style="margin-bottom:15px"><strong>Vai fazer no caderno?</strong> Comece com a nova <button class="btn primary smallbtn" data-jump="papel">Aula passo a passo no papel ↗</button> e volte aqui para responder sem gabarito.</div><div class="toolbar"><label class="small" for="caseSelect">Exercício:</label><select id="caseSelect" class="select"></select><button class="btn ghost" id="casePrev">← Anterior</button><button class="btn ghost" id="caseNext">Próximo →</button><span class="pill green" id="caseProgress">0 / 12 dominados</span></div><div id="originalExercise"></div><div class="hero-actions"><button class="btn primary" data-jump="infinito">Praticar com números diferentes ↗</button><button class="btn" data-jump="percentual">Treinar despesas percentuais</button></div></section>
     <section class="view" id="view-infinito"><div class="sectionhead"><div><p class="eyebrow">02 / REPETIÇÃO ATIVA</p><h1>Treino infinito de ROI.</h1><p class="lead">Não adianta decorar o gabarito: aqui os dados mudam. Escolha a dificuldade e faça cada conta do zero.</p></div></div><div class="toolbar"><label for="randomLevel" class="small">Dificuldade</label><select id="randomLevel" class="select"><option value="facil">Aquecimento</option><option value="medio" selected>Estilo do professor</option><option value="dificil">Desafio avançado</option></select><button class="btn" id="randomNew">Novo problema ↻</button><button class="btn ghost" id="randomHintsToggle">Modo sem dicas: desligado</button></div><div id="randomRoot"></div></section>
     <section class="view" id="view-percentual"><div class="sectionhead"><div><p class="eyebrow">03 / PEGADINHA MATEMÁTICA</p><h1>Quando a despesa é % do preço.</h1><p class="lead">No PDF de arquitetura de preços, a despesa variável é 15% do <strong>preço final</strong>. Aqui você treina essa fórmula até ficar automática.</p></div></div>
       <div class="grid two"><div class="card"><span class="pill green">DADO DO PDF · PÁGINAS 5–6</span><h2 class="section-title" style="margin-top:15px">Exemplo explicado em números</h2><div class="formula">Lucro/un. = (100.000 × 0,20) ÷ 2.000 = R$ 10</div><p>Custos: R$ 50 por unidade + R$ 10 de custo fixo alocado. A meta é R$ 10 de lucro/unidade. As despesas variáveis representam 15% de P.</p><div class="formula">P = 50 + 10 + 10 + 0,15P<br>0,85P = 70<br>P = 70 ÷ 0,85 = R$ 82,35</div><p class="small">Atenção: 15% de R$ 70 não resolve, porque os 15% incidem sobre o preço de venda P, não sobre R$ 70.</p></div><div class="card"><span class="pill orange">LABORATÓRIO</span><h2 class="section-title" style="margin-top:15px">Simulador interativo</h2><div class="calcfields"><div class="fieldwrap"><label for="pInvest">Investimento (R$)</label><input class="field percent-field" id="pInvest" inputmode="decimal" type="number" value="100000"></div><div class="fieldwrap"><label for="pRate">ROI (%)</label><input class="field percent-field" id="pRate" type="number" value="20"></div><div class="fieldwrap"><label for="pUnits">Volume projetado</label><input class="field percent-field" id="pUnits" type="number" value="2000"></div><div class="fieldwrap"><label for="pCost">Custo variável/un.</label><input class="field percent-field" id="pCost" type="number" value="50"></div><div class="fieldwrap"><label for="pFixed">Custo fixo TOTAL (R$)</label><input class="field percent-field" id="pFixed" type="number" value="20000"></div><div class="fieldwrap"><label for="pExpense">Despesa sobre venda (%)</label><input class="field percent-field" id="pExpense" type="number" value="15"></div></div><div class="resultprice" id="pPrice">R$ 82,35</div><div id="pEquation" class="small">...</div><button class="btn ghost" id="pReset" style="margin-top:15px">Repor valores do PDF</button></div></div>
@@ -178,14 +283,14 @@ function register(questionKey,rightAnswer,question='',detail=''){
  if(rightAnswer)right(questionKey);else wrong(questionKey,question,detail);
  save();progress();
 }
-const VIEWS=['inicio','lista','infinito','percentual','teoria','casos','quiz','simulado','revisao'];
-const NAMES={inicio:'PAINEL',lista:'12 CONTAS ORIGINAIS',infinito:'TREINO INFINITO',percentual:'DESPESAS PERCENTUAIS',teoria:'APOSTILA INTERATIVA',casos:'CASOS PRÁTICOS',quiz:'QUIZ DE RESCISÃO',simulado:'SIMULADO',revisao:'REVISÃO'};
+const VIEWS=['inicio','papel','lista','infinito','percentual','teoria','casos','quiz','simulado','revisao'];
+const NAMES={inicio:'PAINEL',papel:'CÁLCULO NO PAPEL',lista:'12 CONTAS ORIGINAIS',infinito:'TREINO INFINITO',percentual:'DESPESAS PERCENTUAIS',teoria:'APOSTILA INTERATIVA',casos:'CASOS PRÁTICOS',quiz:'QUIZ DE RESCISÃO',simulado:'SIMULADO',revisao:'REVISÃO'};
 function go(view){
  if(!VIEWS.includes(view))view='inicio';$$('.view').forEach(x=>x.classList.toggle('active',x.id==='view-'+view));
  $$('.navbtn').forEach(x=>x.classList.toggle('active',x.dataset.view===view));$('#breadcrumb').textContent=NAMES[view];
  window.scrollTo({top:0,behavior:'instant'});window.location.hash=view;
  $('#sidebar').classList.remove('mobile-open');$('#navToggle').setAttribute('aria-expanded','false');
- if(view==='revisao')renderReview();if(view==='lista')renderOriginal();if(view==='teoria')renderTheory();if(view==='percentual')calcPercent();
+ if(view==='papel')renderPaper();if(view==='revisao')renderReview();if(view==='lista')renderOriginal();if(view==='teoria')renderTheory();if(view==='percentual')calcPercent();
  if(view==='quiz'){if(quizLocked){quizLocked=false;nextQuiz()}else renderQuiz()}if(view==='casos'){if(scenarioLocked){scenarioLocked=false;nextScenario()}else renderScenario()};if(view==='simulado'&&!$('#examRoot').innerHTML)examIntro();
  progress();
 }
@@ -395,6 +500,89 @@ function timerPaint(){const n=Math.max(0,timerEnd?Math.ceil((timerEnd-Date.now()
 $('#timerStart').onclick=()=>{if(timerEnd)return;timerEnd=Date.now()+timerLeft*1000;clearInterval(timerLoop);timerLoop=setInterval(timerPaint,500);timerPaint()};
 $('#timerPause').onclick=()=>{if(!timerEnd)return;timerLeft=Math.max(0,Math.ceil((timerEnd-Date.now())/1000));timerEnd=null;clearInterval(timerLoop);timerPaint()};
 $('#timerReset').onclick=()=>{timerEnd=null;timerLeft=1500;clearInterval(timerLoop);timerPaint()};
+
+
+// NOVO MÓDULO: aula guiada para resolver manualmente no caderno.
+let paperMode='oficial',paperCaseId=1,paperRevealed=0;
+ROI_CASES.forEach(function(c){
+  document.getElementById('paperCaseSelect').insertAdjacentHTML('beforeend','<option value="'+c.id+'">'+String(c.id).padStart(2,'0')+' · '+esc(c.title)+'</option>');
+});
+function paperLine(title,prompt,equation,result,why){
+  return {title:title,prompt:prompt,equation:equation,result:result,why:why};
+}
+function paperOriginalSteps(c){
+  const a=roiAnswer(c),gross=a.price*c.units,totalCosts=c.cost*c.units,totalExpenses=c.exp*c.units;
+  const realProfit=round2(gross-totalCosts-totalExpenses),outRate=realProfit/c.invest*100;
+  return [
+    paperLine('Organize os dados','Quais símbolos você vai usar para não misturar os números?','I = '+curr(c.invest)+' | ROI = '+pct(c.rate)+' | Q = '+num(c.units)+' | C = '+curr(c.cost)+' | D = '+curr(c.exp),'Anotação pronta.','I é investimento, Q é quantidade, C é custo por produto, D é despesa por produto. Aqui, C e D já são valores em reais.'),
+    paperLine('Transforme a porcentagem em decimal','O que significa '+pct(c.rate)+' na multiplicação?',num(c.rate)+' ÷ 100 = '+num(c.rate/100),'Taxa decimal = '+num(c.rate/100),'Dividir por 100 desloca a vírgula duas casas para a esquerda. Também pode calcular I × '+num(c.rate)+' ÷ 100.'),
+    paperLine('Calcule o lucro META total','Quanto a fábrica quer ganhar em todo o lote?',curr(c.invest)+' × '+num(c.rate/100)+' = '+curr(a.total),'Lucro total desejado: '+curr(a.total),'Macete: '+pct(c.rate)+' de um valor é esse valor vezes '+num(c.rate)+' dividido por 100. Esse lucro ainda NÃO é o faturamento.'),
+    paperLine('Divida pelo número de unidades','Quanto de lucro cada '+c.item+' deve gerar?',curr(a.total)+' ÷ '+num(c.units)+' = '+curr(a.unit),'Lucro-meta por unidade: '+curr(a.unit),'Se houver zeros iguais no final dos dois números, risque a mesma quantidade de zeros em cima e embaixo antes de dividir.'),
+    paperLine('Some custo + despesa POR UNIDADE','Quanto custa produzir e vender uma unidade, sem incluir o lucro?',curr(c.cost)+' + '+curr(c.exp)+' = '+curr(round2(c.cost+c.exp)),'Gasto unitário: '+curr(round2(c.cost+c.exp)),'Custo de fabricação e despesa operacional são parcelas diferentes; a prova pede a soma das duas.'),
+    paperLine('Descubra o PREÇO de venda','Qual preço cobre o gasto unitário e ainda entrega o lucro-meta?',curr(c.cost)+' + '+curr(c.exp)+' + '+curr(a.unit)+' = '+curr(a.price),'Preço unitário final: '+curr(a.price),'Esta é a segunda resposta normalmente pedida pelo professor. Não multiplique este preço pelo investimento.'),
+    paperLine('Calcule o faturamento do lote','Quanto a empresa recebe se vender todas as unidades?',curr(a.price)+' × '+num(c.units)+' = '+curr(gross),'Receita total: '+curr(gross),'Faturamento não é lucro. A receita inclui dinheiro que ainda vai pagar custos e despesas.'),
+    paperLine('Calcule o custo TOTAL','Quanto será gasto na produção de todas as unidades?',curr(c.cost)+' × '+num(c.units)+' = '+curr(totalCosts),'Custo total: '+curr(totalCosts),'Na conferência, multiplique o custo UNITÁRIO pela quantidade.'),
+    paperLine('Calcule a despesa TOTAL','Quanto será gasto com despesas em todo o lote?',curr(c.exp)+' × '+num(c.units)+' = '+curr(totalExpenses),'Despesa total: '+curr(totalExpenses),'Mesma regra: despesa por unidade vezes quantidade.'),
+    paperLine('Confirme o lucro real da operação','Depois de retirar custo total e despesa total, quanto sobrou?',curr(gross)+' − '+curr(totalCosts)+' − '+curr(totalExpenses)+' = '+curr(realProfit),'Lucro comprovado: '+curr(realProfit),'O lucro real deve coincidir com o lucro-meta do passo 3, se os números forem os da questão.'),
+    paperLine('Comprove o ROI final','Divida o lucro real pelo investimento e transforme em porcentagem.',curr(realProfit)+' ÷ '+curr(c.invest)+' × 100 = '+pct(outRate),'ROI comprovado = '+pct(outRate),'Esta é a terceira resposta. Não calcule ROI dividindo RECEITA pelo investimento: use LUCRO.'),
+  ];
+}
+function paperPercentSteps(){
+  return [
+    paperLine('Separe os dados','Copie os seis dados antes de calcular.','I = R$ 100.000 | ROI = 20% | Q = 2.000 | CV = R$ 50 | CF = R$ 20.000 | DV = 15%','Dados organizados.','Aqui, os 15% NÃO são R$ 15 por produto: são uma porcentagem do preço que ainda vamos descobrir.'),
+    paperLine('Converta o ROI','Quanto vale 20% em decimal?','20 ÷ 100 = 0,20','ROI decimal = 0,20','Para calcular a meta de lucro, primeiro transforme o percentual em decimal.'),
+    paperLine('Calcule o lucro total','Quanto a empresa pretende lucrar sobre o investimento?','100.000 × 0,20 = R$ 20.000','Lucro-meta total = R$ 20.000','É o mesmo início dos exercícios oficiais.'),
+    paperLine('Calcule o lucro por unidade','Divida o lucro do lote pela quantidade.','20.000 ÷ 2.000 = R$ 10','Lucro/un. = R$ 10','Risque os três zeros comuns: 20 ÷ 2 = 10.'),
+    paperLine('Rateie o custo FIXO','Quanto dos R$ 20.000 de custo fixo cabe em cada unidade?','20.000 ÷ 2.000 = R$ 10','Custo fixo/un. = R$ 10','Aqui existe um custo fixo total, diferente da lista oficial, que já fornece custo e despesa por unidade.'),
+    paperLine('Some os valores FIXOS por unidade','Quanto você precisa recuperar antes de considerar os 15% do preço?','50 + 10 + 10 = 70','Base = R$ 70','A base soma custo variável, custo fixo rateado e lucro por unidade.'),
+    paperLine('Converta a despesa percentual','Quanto vale 15% em forma decimal?','15 ÷ 100 = 0,15','Despesa = 0,15 × P','P representa o preço que ainda não sabemos. Não faça 15% de R$ 70.'),
+    paperLine('Monte a equação do preço','Escreva o preço P no lado esquerdo.','P = 70 + 0,15 × P','Equação montada.','Os 15% são calculados em cima do próprio preço final, por isso aparece P também no lado direito.'),
+    paperLine('Passe o percentual para a esquerda','Quanto de P sobra depois de tirar 0,15P?','P − 0,15P = 70 → 0,85P = 70','0,85P = 70','É a mesma coisa que 100% − 15% = 85%.'),
+    paperLine('Tire a vírgula para dividir no papel','Como fazer 70 ÷ 0,85 sem se enrolar com vírgula?','70 ÷ 0,85 = 7.000 ÷ 85','Divisão: 7.000 ÷ 85','Multiplique dividendo e divisor por 100: o valor da divisão permanece igual. 85 × 82 = 6.970; sobra 30.'),
+    paperLine('Encontre o preço final','Qual valor da divisão e como arredondar em reais?','7.000 ÷ 85 = 82,352941... ≈ R$ 82,35','Preço de venda ≈ R$ 82,35','Preço matemático exato é R$ 82,352941...; o arredondamento em centavos pode alterar minimamente o ROI real.'),
+    paperLine('Confira o resultado arredondado','Qual lucro sobra após os 15% do preço?', 'Despesa = 82,35 × 0,15 = R$ 12,3525; lucro/un. = 82,35 − 50 − 10 − 12,3525 = R$ 9,9975','ROI real ≈ 19,995% (≈ 20,00%).','Com preço arredondado a R$ 82,35, o lucro do lote é R$ 19.995; ROI = 19.995 ÷ 100.000 × 100 = 19,995%. Se precisar garantir pelo menos 20% sem arredondamento, cobre R$ 82,36.'),
+  ];
+}
+function renderPaper(){
+  const c=ROI_CASES.find(function(x){return x.id===paperCaseId;})||ROI_CASES[0];
+  const isOriginal=paperMode==='oficial',steps=isOriginal?paperOriginalSteps(c):paperPercentSteps();
+  document.getElementById('paperCaseControls').style.display=isOriginal?'flex':'none';
+  document.getElementById('paperCaseSelect').value=String(c.id);
+  document.getElementById('paperTitle').textContent=isOriginal?('Exercício '+c.id+' · '+c.title):'Aula especial · 15% sobre o próprio preço';
+  document.getElementById('paperIntro').textContent=isOriginal?'Vamos resolver, no papel, a questão original da sua apostila: '+c.context:'Exemplo do material de arquitetura de preços. Aqui, ao contrário da lista original, parte das despesas é uma porcentagem do próprio preço.';
+  document.getElementById('paperLabel').textContent=isOriginal?('QUESTÃO OFICIAL '+String(c.id).padStart(2,'0')+' / 12'):'CASO ESPECIAL · DESPESA PERCENTUAL';
+  document.getElementById('paperFacts').innerHTML=isOriginal?caseFacts(c):'<div class="problem-data"><div class="datum"><small>Investimento</small><strong>R$ 100.000</strong></div><div class="datum"><small>ROI-meta</small><strong>20%</strong></div><div class="datum"><small>Unidades</small><strong>2.000</strong></div><div class="datum"><small>Custo variável/un.</small><strong>R$ 50</strong></div><div class="datum"><small>Custo fixo total</small><strong>R$ 20.000</strong></div><div class="datum"><small>Despesa sobre o preço</small><strong>15%</strong></div></div>';
+  document.querySelectorAll('[data-paper-mode]').forEach(function(b){
+    const active=b.dataset.paperMode===paperMode;
+    b.classList.toggle('primary',active);b.classList.toggle('ghost',!active);b.setAttribute('aria-pressed',String(active));
+  });
+  document.getElementById('paperCounter').textContent=paperRevealed+' / '+steps.length+' linhas reveladas';
+  document.getElementById('paperFill').style.width=(paperRevealed/steps.length*100)+'%';
+  document.getElementById('paperReveal').disabled=paperRevealed>=steps.length;
+  document.getElementById('paperLines').innerHTML=steps.map(function(s,i){
+    const visible=i<paperRevealed;
+    return '<article class="paper-line '+(visible?'revealed':'hidden')+'">'+
+      '<div class="paper-line-head"><span class="paper-line-number">'+String(i+1).padStart(2,'0')+'</span><h3>'+esc(s.title)+'</h3></div>'+
+      '<p class="paper-prompt">'+esc(s.prompt)+'</p>'+
+      (visible?'<div class="paper-equation">'+esc(s.equation)+'</div><div class="paper-result">'+esc(s.result)+'</div><div class="paper-reason">'+esc(s.why)+'</div>':'<div class="paper-hidden-equation">= ____________________</div>')+'</article>';
+  }).join('');
+  document.getElementById('paperFinish').innerHTML=paperRevealed===steps.length?
+    '<div class="paper-done"><strong>Resolução completa.</strong> Esconda tudo e tente refazer sem olhar.'+
+    (isOriginal?'<div class="hero-actions"><button class="btn primary" id="paperTry" type="button">Fazer esta questão sem gabarito ↗</button></div>':'<div class="hero-actions"><button class="btn primary" type="button" data-jump="percentual">Treinar novos números ↗</button></div>')+'</div>':
+    '<p class="paper-muted">Respostas ocultas: '+(steps.length-paperRevealed)+' linhas. Faça cada operação no seu caderno antes de revelar.</p>';
+}
+document.getElementById('view-papel').addEventListener('click',function(e){
+  let b=e.target.closest('[data-paper-mode]');
+  if(b){paperMode=b.dataset.paperMode;paperRevealed=0;renderPaper();return;}
+  if(e.target.closest('#paperPrev')){paperCaseId=paperCaseId===1?12:paperCaseId-1;paperRevealed=0;renderPaper();return;}
+  if(e.target.closest('#paperNext')){paperCaseId=paperCaseId===12?1:paperCaseId+1;paperRevealed=0;renderPaper();return;}
+  if(e.target.closest('#paperReveal')){paperRevealed=Math.min((paperMode==='oficial'?11:12),paperRevealed+1);renderPaper();return;}
+  if(e.target.closest('#paperAll')){paperRevealed=paperMode==='oficial'?11:12;renderPaper();return;}
+  if(e.target.closest('#paperReset')){paperRevealed=0;renderPaper();return;}
+  if(e.target.closest('#paperTry')){currentCase=paperCaseId;go('lista');return;}
+});
+document.getElementById('paperCaseSelect').addEventListener('change',function(e){paperCaseId=Number(e.target.value)||1;paperRevealed=0;renderPaper();});
+renderPaper();
 
 renderRoadmap();renderOriginal();newRandom();newPercent();renderTheory();nextQuiz();nextScenario();calcPercent();progress();
 if(location.hash&&VIEWS.includes(location.hash.slice(1)))go(location.hash.slice(1));
