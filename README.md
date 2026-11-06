@@ -3,6 +3,9 @@
 Site de revisão intensiva para prova, focado em **formação de preços por ROI** e **rescisão de contrato de trabalho**.
 
 ## O que tem no site
+- Nova **Aula: cálculo no papel**, com todas as etapas escritas na ordem da prova, para os 12 exercícios originais (11 linhas guiadas por caso)
+- Aula especial de despesa de 15% sobre o preço, com 12 linhas, isolamento da incógnita e divisão manual
+- Resolução progressiva: tente na folha, revele uma linha por vez, esconda e refaça
 - 12 exercícios originais de ROI, com respostas por etapa
 - Gerador de novas contas com dificuldade ajustável
 - Simulador de formação do preço com despesas percentuais
@@ -12,7 +15,7 @@ Site de revisão intensiva para prova, focado em **formação de preços por ROI
 - Progresso salvo localmente no navegador
 
 ## Como usar
-Abra `index.html` em um navegador. O site é independente e não precisa de instalação, servidor ou conta.
+Abra `index.html` em um navegador. Comece pela opção **Aula: cálculo no papel** no menu lateral. O site é independente e não precisa de instalação, servidor ou conta.
 
 ## Publicar no GitHub Pages
 1. Abra **Settings → Pages** no repositório.
